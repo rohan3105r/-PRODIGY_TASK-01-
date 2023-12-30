@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #02093a;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: rgb(230, 233, 15);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #404344;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-color: hsl(215, 64%, 78%);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#Home">Home</a>
+        <a href="#MainMenu">Main Menu</a>
+        <a href="#Login">Login</a>
+        <a href="#Aboutus">Aboutus</a>
+    </nav>
+</header>
+
+<section id="Home">
+    <p> Prodgy infotech</p>
+    
+</section>
+
+<section id="#MainMenu">
+    <p>Content for Main Menu</p>
+</section>
+
+<section id="Login">
+    <p>Content for login</p>
+</section>
+
+<section id="Aboutus">
+    <p>Content for About us </p>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = '#555';
+            } else {
+                header.style.backgroundColor = '#333';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
